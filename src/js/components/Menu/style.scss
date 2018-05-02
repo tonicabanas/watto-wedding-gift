@@ -1,7 +1,31 @@
-.Menu {
+@import '~scss/theme/colors.scss';
 
-  h1{
+.Menu {
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+  h1 {
+    font-family: Tropic;
+    text-transform: uppercase;
     font-size: 9rem;
+    color: $exotic-green;
+    text-align: center;
+    padding-right: 2rem;
+    text-shadow: 0.2rem 0.2rem 0.2rem black;
+  }
+  .Menu-title {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+  }
+  .Menu-img {
+    align: left;
+    background-image: url("../../../assets/img/palms.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 8rem;
+    width: 8rem;
+
   }
 }
 

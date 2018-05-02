@@ -8,7 +8,7 @@ export default class TShirt extends Component {
       <div className='TShirt'>
         <div className='TShirt-img'>
           <div className='TShirt-name'>{ this.props.name }</div>
-          <div className='TShirt-number'><input type='number'/></div>
+          <div className='TShirt-number'><input type='number no-spinners'/></div>
         </div>
       </div>
     );

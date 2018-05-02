@@ -15,6 +15,7 @@ const Dashboard = () => (
     <TShirt name={ 'Bohada' }/>
     <TShirt name={ 'Uge' }/>
     <TShirt name={ 'Todassss' }/>
+    <TShirt name={ 'Kike' }/>
   </div>
 );
 

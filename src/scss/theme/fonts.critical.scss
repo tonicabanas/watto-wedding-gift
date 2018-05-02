@@ -6,3 +6,11 @@ $path: '../../assets/fonts';
   font-weight: normal;
   font-style: normal;
 }
+
+
+@font-face {
+  font-family: 'Tropic';
+  src: url('#{$path}/tikitropic.ttf');
+  font-weight: normal;
+  font-style: normal;
+}

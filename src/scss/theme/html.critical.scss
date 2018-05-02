@@ -1,4 +1,5 @@
 @import '~scss/theme/variables.scss';
+@import '~scss/theme/colors.scss';
 
 html {
   -webkit-font-smoothing: antialiased;
@@ -14,10 +15,24 @@ html.desktop {
 
 html.mobile {
   -webkit-overflow-scrolling: touch;
-  
+
   font-size: get-mobile-vw(10px);
 }
 
 body {
   font-size: get-rem(16px);
+  background-image: url("../../assets/img/palms-bg.jpg");
+  background-size: cover;
+
+}
+
+html.mobile {
+  body {
+
+    background: #fefcea; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #fefcea 0%, #fffd7f 34%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, #fefcea 0%, #fffd7f 34%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, #fefcea 0%, #fffd7f 34%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefcea', endColorstr='#fffd7f', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+  }
 }
