@@ -1,0 +1,11 @@
+.TShirt {
+  flex-grow: 1;
+  min-height: 200px;
+  min-width: 200px;
+  .TShirt-img {
+    background-image: url("../../../assets/img/tshirt.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+  }
+}

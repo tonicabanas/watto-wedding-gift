@@ -1,31 +1,8 @@
 .Menu {
-  align-items: center;
-  border-bottom: 1px solid var(--grey-border);
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 2rem;
-  margin: 0 auto 2rem;
-  max-width: 60rem;
+
+  h1{
+    font-size: 9rem;
+  }
 }
 
-.Menu img {
-  display: block;
-}
 
-.Menu-logo {
-  margin-right: 2rem;
-  width: 6rem;
-}
-
-.Menu-link {
-  display: inline-block;
-  font-family: var(--font-family-serif);;
-  font-style: italic;
-  margin-left: 1.5rem;
-  line-height: 3rem;
-  text-decoration: none;
-}
-
-.Menu-link--active {
-  color: var(--black);
-}

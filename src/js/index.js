@@ -1,13 +1,11 @@
 /* eslint-env browser */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Loadable from 'react-loadable';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 
 import App from 'views/App';
 
-import routeDataManager from 'services/routeDataManager';
 import configureStore from 'store';
 
 // Browser polyfills
@@ -36,27 +34,11 @@ if (device === 'mobile') {
   store.dispatch(setDevice(mediaListener.matches));
 }
 
-// If SSR is enabled, hydrate instead of rendering
-if (process.env.HYDRATE) {
-  Loadable.preloadReady().then(() => {
-    ReactDOM.hydrate(
-      <Provider store={store}>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </Provider>,
-      document.getElementById('root')
-    );
-  });
-} else {
-  // Fetch initial route data
-  routeDataManager(store.dispatch, store.getState, window.location);
-  ReactDOM.render(
-    <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Provider>,
-    document.getElementById('root')
-  );
-}
+ReactDOM.render(
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
+  document.getElementById('root')
+);

@@ -27,11 +27,9 @@ const chalk = require('chalk');
 const fs = require('fs-extra');
 const webpack = require('webpack');
 const configClient = require('../config/webpack.config.prod');
-const configServer = require('../config/webpack.config.server');
 const paths = require('../config/paths');
 const checkRequiredFiles = require('react-dev-utils/checkRequiredFiles');
 const formatWebpackMessages = require('react-dev-utils/formatWebpackMessages');
-const printHostingInstructions = require('react-dev-utils/printHostingInstructions');
 const FileSizeReporter = require('react-dev-utils/FileSizeReporter');
 const printBuildError = require('react-dev-utils/printBuildError');
 
@@ -120,39 +118,13 @@ measureFileSizesBeforeBuild(paths.appBuild)
       WARN_AFTER_CHUNK_GZIP_SIZE
     );
     console.log();
-
-    // Compile now the server
-    return build(previousFileSizes, configServer, '[Server] ');
-  })
-  .then(({ stats, previousFileSizes, warnings }) => {
-    if (warnings.length) {
-      console.log(chalk.yellow('[Server]: Compiled with warnings.\n'));
-      console.log(warnings.join('\n\n'));
-      console.log(`\nSearch for the ${
-        chalk.underline(chalk.yellow('keywords'))
-      } to learn more about each warning.`);
-      console.log(`To ignore, add ${
-        chalk.cyan('// eslint-disable-next-line')
-      } to the line before.\n`);
-    } else {
-      console.log(chalk.green('[Server]: Compiled successfully.\n'));
-    }
-
-    console.log('File sizes after gzip:\n');
-    printFileSizesAfterBuild(
-      stats,
-      previousFileSizes,
-      paths.appBuild,
-      WARN_AFTER_BUNDLE_GZIP_SIZE,
-      WARN_AFTER_CHUNK_GZIP_SIZE
-    );
-    console.log();
   },
   (err) => {
     console.log(chalk.red('Failed to compile.\n'));
     printBuildError(err);
     process.exit(1);
-  });
+  }
+  );
 
 
 function copyPublicFolder() {

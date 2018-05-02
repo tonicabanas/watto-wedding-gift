@@ -1,5 +1,8 @@
 @import '~scss/theme/variables';
 
 .Dashboard {
-  background-color: lightblue;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
 }

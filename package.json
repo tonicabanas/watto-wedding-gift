@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.2.5",
-    "express": "^4.16.2",
     "immutable": "^3.8.2",
     "ismobilejs": "^0.4.1",
     "prop-types": "^15.6.0",
@@ -15,16 +14,14 @@
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0",
-    "remotedev-serialize": "^0.1.0"
+    "redux-thunk": "^2.2.0"
   },
   "scripts": {
     "analyze": "source-map-explorer build/static/js/main.*",
     "analyze-vendor": "source-map-explorer build/static/js/vendor.*",
     "analyze-css": "source-map-explorer build/static/css/main.*",
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "build-server": "node scripts/build-server.js"
+    "build": "node scripts/build.js"
   },
   "main": "index.js",
   "license": "MIT",
