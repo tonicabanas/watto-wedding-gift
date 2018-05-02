@@ -5,14 +5,16 @@ import './style.scss';
 
 const Dashboard = () => (
   <div className='Dashboard'>
-    <TShirt name={'Tiki'}/>
-    <TShirt name={'Taka'}/>
-    <TShirt name={'Machicambo'}/>
-    <TShirt name={'Licor'}/>
-    <TShirt name={'Agui.Haz'}/>
-    <TShirt name={'Max Power'}/>
-    <TShirt name={'Jorginho'}/>
-    <TShirt name={'Bohada'}/>
+    <TShirt name={ 'Tiki' }/>
+    <TShirt name={ 'Taka' }/>
+    <TShirt name={ 'Machicambo' }/>
+    <TShirt name={ 'Licor' }/>
+    <TShirt name={ 'Agui.Haz' }/>
+    <TShirt name={ 'Max Power' }/>
+    <TShirt name={ 'Jorginho' }/>
+    <TShirt name={ 'Bohada' }/>
+    <TShirt name={ 'Uge' }/>
+    <TShirt name={ 'Todassss' }/>
   </div>
 );
 
