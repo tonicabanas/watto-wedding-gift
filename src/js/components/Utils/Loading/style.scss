@@ -1,0 +1,50 @@
+@import '~scss/theme/variables.scss';
+
+.Loading {
+  position: relative;
+  width: 100%;
+  height: get-rem(500px);
+  background-color: white;
+  // Here is where the magic happens
+
+  $offset: 187;
+  $duration: 1.4s;
+
+  .Spinner {
+    @include centerer;
+    width: get-rem(65px);
+    height: get-rem(65px);
+    margin-left: get-rem(-30px);
+    margin-top: get-rem(-20px);
+    animation: rotator $duration linear infinite;
+    z-index: 3;
+    circle {
+      stroke: currentColor;
+    }
+  }
+
+  @keyframes rotator {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(270deg); }
+  }
+
+  .path {
+    stroke-dasharray: $offset;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+    animation:
+      dash $duration ease-in-out infinite;
+  }
+
+  @keyframes dash {
+  0% { stroke-dashoffset: $offset; }
+  50% {
+    stroke-dashoffset: $offset/4;
+    transform:rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: $offset;
+    transform:rotate(450deg);
+  }
+  }
+}
