@@ -48,7 +48,7 @@ export default class Dashboard extends Component {
 
       </div>
     );
-    if (true || this.allPlayersCorrect()) {
+    if (this.allPlayersCorrect()) {
     }
     return (
       <div className='Dashboard'>
