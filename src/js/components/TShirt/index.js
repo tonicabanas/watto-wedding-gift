@@ -7,6 +7,7 @@ export default class TShirt extends Component {
   static propTypes = {
     name: PropTypes.string,
     number: PropTypes.number,
+    setStatus: PropTypes.func,
   };
 
   constructor(props) {
@@ -24,10 +25,16 @@ export default class TShirt extends Component {
     this.setState({
       inputValue: evt.target.value,
     });
+    this.props.setStatus(this.props.name, this.isCorrect(evt.target.value));
+  }
+
+  isCorrect(value) {
+    const number = value || value === '' ? parseInt(value) : parseInt(this.state.inputValue);
+    return this.getNumber() === number;
   }
 
   renderCorrect() {
-    return (parseInt(this.getNumber()) === parseInt(this.state.inputValue) ? <div className='TShirt-palm'/> : null);
+    return (this.isCorrect() ? <div className='TShirt-palm'/> : null);
   }
 
   render() {
@@ -36,7 +43,7 @@ export default class TShirt extends Component {
         <div className='TShirt-img'>
           <div className='TShirt-name'>{ this.props.name }</div>
           <div className='TShirt-number'><input value={ this.state.inputValue }
-                                                onChange={ evt => this.updateInputValue(evt) }
+                                                onChange={ evt => { this.updateInputValue(evt); } }
                                                 type='number no-spinners'/></div>
           { this.renderCorrect() }
         </div>
