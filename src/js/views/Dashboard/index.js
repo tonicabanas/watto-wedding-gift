@@ -34,21 +34,23 @@ export default class Dashboard extends Component {
   }
 
   render() {
-    return (
-      <div className='Dashboard'>
-        <div className='Dashboard-instructions'><h2>Enhorabuena Watto!!! </h2>En el siguiente enlace podrás encontrar la
-          clave de tu caja fuerte.
-          Presta atención ya que los número van apareciendo a lo largo de todo el vídeo, pueden estar escritos o ser
-          dichos en audio. Disfrútalo!
-          <div className='Dashboard-btnWrapper'>
-            <a href='https://www.youtube.com/watch?v=izGwDsrQ1eQ' className='Dashboard-btn'>Ver el vídeo!</a>
-
-          </div>
-        </div>
-
-      </div>
-    );
     if (this.allPlayersCorrect()) {
+      return (
+        <div className='Dashboard'>
+          <div className='Dashboard-instructions'><h2>Enhorabuena Watto!!! </h2>En el siguiente enlace podrás encontrar
+            la
+            clave de tu caja fuerte.
+            Presta atención ya que los número van apareciendo a lo largo de todo el vídeo, pueden estar escritos o ser
+            dichos en audio. Disfrútalo!
+            <div className='Dashboard-btnWrapper'>
+              <a href='https://www.youtube.com/watch?v=izGwDsrQ1eQ' className='Dashboard-btn'>Ver el vídeo!</a>
+
+            </div>
+          </div>
+
+        </div>
+      );
+
     }
     return (
       <div className='Dashboard'>
