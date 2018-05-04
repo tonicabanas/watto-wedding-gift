@@ -43,7 +43,7 @@ export default class Dashboard extends Component {
             Presta atención ya que los número van apareciendo a lo largo de todo el vídeo, pueden estar escritos o ser
             dichos en audio. Disfrútalo!
             <div className='Dashboard-btnWrapper'>
-              <a href='https://www.youtube.com/watch?v=izGwDsrQ1eQ' className='Dashboard-btn'>Ver el vídeo!</a>
+              <a href='https://s3.eu-west-1.amazonaws.com/watto.wedding.gift/gift_watto.mp4' className='Dashboard-btn'>Ver el vídeo!</a>
 
             </div>
           </div>
