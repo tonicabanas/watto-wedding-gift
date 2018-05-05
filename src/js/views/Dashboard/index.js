@@ -19,6 +19,8 @@ export default class Dashboard extends Component {
       Todassss: false,
       Kike: false,
       Xavi: false,
+      Yago: false,
+      Watto: false,
     };
   }
 
@@ -66,6 +68,8 @@ export default class Dashboard extends Component {
         <TShirt name="Todassss" number={ 2205 } setStatus={ this.setStatusPlayer }/>
         <TShirt name="Kike" number={ 2645 } setStatus={ this.setStatusPlayer }/>
         <TShirt name="Xavi" number={ 0 } setStatus={ this.setStatusPlayer }/>
+        <TShirt name="Yago" number={ 20 } setStatus={ this.setStatusPlayer }/>
+        <TShirt name="Watto" number={ 23805 } setStatus={ this.setStatusPlayer }/>
       </div>
     );
 
